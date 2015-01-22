@@ -13,6 +13,7 @@
  * static class
  */
 class Faker {
+
     // return a number > 0
     public static function num($max = 100) {
         return rand(1, $max);
@@ -26,5 +27,10 @@ class Faker {
     public static function name() {
         require_once __DIR__."/FakeName.php";
         return FakeName::firstName() . ' ' . FakeName::lastName();
+    }
+
+    public static function country() {
+        require_once __DIR__."/FakeName.php";
+        return FakeName::countryName();
     }
 }
